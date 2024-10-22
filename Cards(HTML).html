@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Cards for Mobile phones and Tabs!</title>
+    <meta name="description" content="Explore our mobile phones and tablets, designed to enhance your life! Capture memories, stay connected, and unleash your creativity with vibrant displays and smooth performance. ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hola.css" type="text/css">
+    <script href="./js.js"></script>
+
+</head>
+<body >
+    <div class="main_code">
+    <div class="header" >
+        <h1 class="topic">Cards for Smart Devices</h1>
+    </div>
+    <div class="slides_1">
+    <img src="./Public/samsunsg s24.png"  class="banner">
+    <div class="Phones">
+       <img src="./Public/samsusng s24.jpg" style="opacity:1" class="samsung" id="samsung">
+       <img src="./Public/samsunsg s24 front.jpg" style="opacity:0" class="samsung_front" id="samsung_front">
+       <img src="./Public/samsunsg s24 back.jpg" style="opacity:0" class="samsung_back" id="samsung_back">
+       <p class="name"> Samsung Galaxy S24+</p>
+       <p class="desc1"> The Samsung Galaxy S24+ is a flagship smartphone that combines cutting-edge technology with sleek design. Featuring a vibrant 6.7-inch Dynamic AMOLED display, it offers stunning visuals with vivid colors and deep blacks, ideal for streaming and gaming. The phone is powered by the latest Snapdragon processor, ensuring smooth performance and efficient multitasking.</p>
+       <button class="slide_1" onclick="slide_1()">next></button>
+       <button class="slide_2" onclick="slide_2()">back<</button>
+       <button class="Learn_more1">
+        <a href="https://www.gsmarena.com/samsung_galaxy_s24+-12772.php">Know more</a>
+       </button>
+    </div>
+    <div class="ipad">
+        <img src="./Public/apple ipad front.jpg" class="ipad_front" id="ipad_front">
+        <img src="./Public/apple ipad 10th gen.jpg" class="ipad_10thgen" id="ipad_10thgen">
+        <img src="./Public/apple ipad back.jpg" class="ipad_back" id="ipad_back">
+        <p class="name2">Apple Ipad 10th gen</p>
+        <p class="desc2"> The Apple iPad 10th generation, launched in 2022, features a stunning 10.9-inch Liquid Retina display that brings your favorite content to life. With the powerful A14 Bionic chip, it effortlessly handles everything from streaming shows to multitasking with apps. Whether you’re browsing the web or catching up on video calls, this iPad makes it all smooth and enjoyable.</p>
+        <button class="slide_p" onclick="slide_p()">next></button>
+        <button class="slide_q" onclick="slide_q()">back<</button>
+        <button class="Learn_more2">
+            <a href="https://www.gsmarena.com/apple_ipad_(2022)-11941.php">Know more</a>
+        </button>
+    </div>>
+    </div>
+    </div>
+    </div> 
+    <script>
+        function slide_1(){
+            const samsung= document.getElementById("samsung");
+            const samsung_back=document.getElementById("samsung_back");
+            const samsung_front=document.getElementById("samsung_front");
+
+            if(samsung_front.style.opacity != "1" && samsung_back.style.opacity != "1"){
+                samsung.style.opacity="0";
+                samsung_front.style.opacity='1';
+            } 
+            else if(samsung_back.style.opacity !="1"){
+                samsung_front.style.opacity="0";
+                samsung_back.style.opacity="1";
+            }
+            else {
+                samsung.style.opacity="1";
+                samsung_front.style.opacity="0";
+                samsung_back.style.opacity="0";
+   
+            }
+        }
+            function slide_2(){
+                const samsung= document.getElementById("samsung");
+                const samsung_back=document.getElementById("samsung_back");
+                const samsung_front=document.getElementById("samsung_front");
+
+            if(samsung.style.opacity == "1" && samsung_back.style.opacity == "0"){
+                samsung.style.opacity="0";
+                samsung_back.style.opacity='1';
+            }
+            else if(samsung_back.style.opacity =="1"){
+                samsung_front.style.opacity="1";
+                samsung_back.style.opacity="0";
+            }
+            else {
+                samsung.style.opacity="1";
+                samsung_front.style.opacity="0";
+   
+            }
+        }
+        function slide_p(){
+            const ipad_front=document.getElementById("ipad_front");
+            const ipad_10thgen=document.getElementById("ipad_10thgen");
+            const ipad_back=document.getElementById("ipad_back");
+
+            if(ipad_front.style.opacity != "1" && ipad_back.style.opacity != "1"){
+                ipad_front.style.opacity="1";
+                ipad_10thgen.style.opacity="0";
+            } 
+            else if(ipad_back.style.opacity !="1"){
+                ipad_front.style.opacity="0";
+                ipad_back.style.opacity="1";
+            }
+            else {
+                ipad_10thgen.style.opacity="1";
+                ipad_front.style.opacity="0";
+                ipad_back.style.opacity="0";
+   
+            }
+        }
+            function slide_q(){
+                const ipad_front= document.getElementById("ipad_front");
+                const ipad_10thgen=document.getElementById("ipad_10thgen");
+                const ipad_back=document.getElementById("ipad_back");
+
+            if(ipad_10thgen.style.opacity == "1" && ipad_back.style.opacity == "0"){
+                ipad_10thgen.style.opacity="0";
+                ipad_back.style.opacity='1';
+            }
+            else if(ipad_back.style.opacity =="1"){
+                ipad_front.style.opacity="1";
+                ipad_back.style.opacity="0";
+            }
+            else {
+                ipad_10thgen.style.opacity="1";
+                ipad_front.style.opacity="0";
+   
+            }
+        }
+
+    </script> 
+</body>
+</html>
